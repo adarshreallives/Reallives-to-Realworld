@@ -1,0 +1,20 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import { PrefsProvider } from "./prefs.jsx";
+import "./styles.css";
+
+try {
+  const theme = localStorage.getItem("rl-theme");
+  if (theme === "dark" || theme === "light") {
+    document.documentElement.setAttribute("data-theme", theme);
+  }
+} catch { /* ignore */ }
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <PrefsProvider>
+      <App />
+    </PrefsProvider>
+  </React.StrictMode>
+);
