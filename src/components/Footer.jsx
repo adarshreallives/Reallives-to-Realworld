@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { brand, nav, moreNav } from "../content.js";
+import { brand, nav } from "../content.js";
 import { Mark } from "./ui.jsx";
 import { usePrefs } from "../prefs.jsx";
 
@@ -32,13 +32,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3>{t("footer.more")}</h3>
-            <ul>
-              {moreNav.map((n) => (
-                <li key={n.path}><Link to={n.path}>{t(`nav.${n.path}`)}</Link></li>
-              ))}
-            </ul>
-            <h3 style={{ marginTop: 22 }}>{t("footer.contact")}</h3>
+            <h3>{t("footer.contact")}</h3>
             <ul>
               <li><a href={`mailto:${c.email}`}>{c.email}</a></li>
               <li><a href={`tel:${c.phone.replace(/\s/g, "")}`}>{c.phone}</a></li>

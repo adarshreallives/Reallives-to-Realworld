@@ -13,6 +13,7 @@ export default function Home() {
 
     <>
       <Hero />
+      
       <section className="featured">
         <div className="wrap featured__in">
           <header className="featured__head">
@@ -25,6 +26,7 @@ export default function Home() {
               </div>
             </div>
           </header>
+
           <div className="featured__grid">
             {featured.items.map((d, i) => (
               <Link key={d.title} className={`fcard${i === 0 ? " fcard--lead" : ""}`} to={d.href}>

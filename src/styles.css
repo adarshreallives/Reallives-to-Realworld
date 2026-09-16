@@ -967,16 +967,16 @@ html, body { margin: 0; }
   line-height: 1.12;
   margin-bottom: 10px !important;
 }
-.leader__roles {
+.rl ul.leader__roles {
   display: flex; flex-wrap: wrap; gap: 8px;
-  margin: 12px 0 20px; padding: 0 0 20px;
+  margin: 12px 0 20px; padding: 0 0 22px;
   border-bottom: 1px solid var(--rule);
 }
 .leader__roles li {
   font-size: 12px; font-weight: 650; letter-spacing: .04em;
   color: var(--teal); background: rgba(14,110,115,.08);
   border: 1px solid rgba(14,110,115,.18);
-  border-radius: 999px; padding: 8px 14px; line-height: 1.3;
+  border-radius: 999px; padding: 10px 16px; line-height: 1.3;
 }
 .leader__standfirst { margin: 0 0 8px; max-width: none; }
 .leader__bio p {
