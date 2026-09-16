@@ -79,9 +79,12 @@ export default function Header() {
         <Link className="nav__mark" to="/" onClick={close} aria-label="RealLives to RealWorld">
           <Mark />
           <span className="nav__lockup">
-            <span className="nav__lockup-name">RealLives</span>
-            <span className="nav__lockup-sub"><em>To</em> <b>RealWorld</b></span>
-            <span className="nav__lockup-tag">{t("tagline")}</span>
+            <span className="nav__lockup-row">
+              <span className="nav__lockup-name">RealLives</span>
+              <span className="nav__lockup-to">to</span>
+              <span className="nav__lockup-world">RealWorld</span>
+            </span>
+            <span className="nav__lockup-tag">The ChangeMaker Journey</span>
           </span>
         </Link>
         <nav className="nav__links" aria-label="Primary">
