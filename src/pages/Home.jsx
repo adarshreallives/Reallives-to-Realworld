@@ -10,7 +10,7 @@ export default function Home() {
   const { copy } = usePrefs();
   const f = copy.featured;
   return (  
-    
+
     <>
       <Hero />
       <section className="featured">
