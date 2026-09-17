@@ -32,50 +32,197 @@ export function Hero() {
   );
 }
 
+function IdeaIcon({ i }) {
+  if (i === 1) {
+    return (
+      <svg viewBox="0 0 48 48" width="30" height="30" fill="none" aria-hidden="true">
+        <ellipse cx="24" cy="30" rx="11" ry="4.2" stroke="currentColor" strokeWidth="2.1" />
+        <ellipse cx="24" cy="22" rx="11" ry="4.2" stroke="currentColor" strokeWidth="2.1" />
+        <path d="M13 22v8M35 22v8M13 30c0 2.4 4.9 4.2 11 4.2s11-1.8 11-4.2" stroke="currentColor" strokeWidth="2.1" />
+      </svg>
+    );
+  }
+  if (i === 2) {
+    return (
+      <svg viewBox="0 0 48 48" width="30" height="30" fill="none" aria-hidden="true">
+        <rect x="12" y="8" width="20" height="26" rx="2" stroke="currentColor" strokeWidth="2.1" />
+        <path d="M17 15h10M17 20h10" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" />
+        <circle cx="30" cy="31" r="8" fill="var(--ivory)" stroke="currentColor" strokeWidth="2.1" />
+        <path d="M30 27.5v7M26.8 31h6.4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    );
+  }
+  if (i === 3) {
+    return (
+      <svg viewBox="0 0 48 48" width="30" height="30" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="14" stroke="currentColor" strokeWidth="2.1" />
+        <path d="M24 14v4.5M24 29.5V34M14 24h4.5M29.5 24H34" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" />
+        <path d="M24 20.5 26.2 24 24 27.5 21.8 24Z" fill="currentColor" />
+      </svg>
+    );
+  }
+  return (
+    <svg viewBox="0 0 48 48" width="30" height="30" fill="none" aria-hidden="true">
+      <path d="M10 38V16l14-8 14 8v22" stroke="currentColor" strokeWidth="2.1" strokeLinejoin="round" />
+      <path d="M10 16l14 8 14-8M24 24v14" stroke="currentColor" strokeWidth="2.1" />
+      <circle cx="32.5" cy="14" r="5.2" fill="var(--ivory)" stroke="currentColor" strokeWidth="2.1" />
+      <circle cx="32.5" cy="14" r="1.5" fill="currentColor" />
+    </svg>
+  );
+}
+
 export function Idea() {
   const { copy } = usePrefs();
   const i = copy.idea;
   return (
-    <section className="sec">
+    <section className="sec idea-sec">
       <div className="wrap">
-        <SectionHead eyebrow={i.eyebrow} title={i.title} lede={i.intro} />
+        <header className="idea-sec__head">
+          <p className="eyebrow">{i.eyebrow}</p>
+          <div className="idea-sec__title-row">
+            <h2 className="h-sec">{i.title}</h2>
+            <p className="idea-sec__aside">
+              Real questions.<br />
+              Real clarity.
+              <svg className="idea-sec__mark" viewBox="0 0 92 14" aria-hidden="true">
+                <path d="M3 9C18 3.5 36 12 54 7.5C68 3.8 80 8.2 89 6" fill="none" stroke="#C89032" strokeWidth="2.4" strokeLinecap="round" />
+              </svg>
+            </p>
+          </div>
+          <p className="lede">{i.intro}</p>
+        </header>
         <div className="nots">
           {i.cards.map((c, n) => (
             <article key={c.is} className="nots__row">
-              <span className="nots__n">{String(n + 1).padStart(2, "0")}</span>
-              <h3><em>{c.not}</em>{c.is}</h3>
+              <div className="nots__lead">
+                <span className="nots__n">{String(n + 1).padStart(2, "0")}</span>
+                <span className={"nots__icon nots__icon--" + n} aria-hidden="true">
+                  <IdeaIcon i={n} />
+                </span>
+                <h3><em>{c.not}</em>{c.is}</h3>
+              </div>
               <p>{c.body}</p>
             </article>
           ))}
         </div>
-        <div className="pledge">
-          <p className="eyebrow">{i.pledgeLabel}</p>
-          <p>{i.pledgeBody}</p>
-        </div>
+        <div className="featured__strip">Real places / Real people / Real change</div>
       </div>
+      <svg className="idea-sec__waves" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 42C160 22 260 62 420 38C590 12 720 58 900 34C1080 12 1240 48 1440 30" fill="none" stroke="#C89032" strokeWidth="1.8" />
+        <path d="M0 58C150 40 270 74 460 54C620 36 760 70 940 58" fill="none" stroke="#7EB8B8" strokeWidth="1.8" />
+      </svg>
     </section>
   );
+}
+
+const ARC_PHOTOS = [
+  "/assets/korean-educators.jpg",
+  "/assets/korea-school-meeting.jpg",
+  "/assets/hero-seoul-student.jpg",
+  "/assets/card-universities.jpg",
+  "/assets/yeomyung-school.jpg",
+];
+
+function ArcIcon({ i }) {
+  if (i === 0) {
+    return (
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" aria-hidden="true">
+        <circle cx="9" cy="8" r="2.4" stroke="currentColor" strokeWidth="1.7" />
+        <circle cx="15.5" cy="8.4" r="2.2" stroke="currentColor" strokeWidth="1.7" />
+        <path d="M4.5 18c.4-3 2.4-4.6 4.6-4.6S13.3 15 13.6 18M13 13.6c1.8-.3 3.6.8 4.4 4.4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+      </svg>
+    );
+  }
+  if (i === 1) {
+    return (
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" aria-hidden="true">
+        <path d="M12 4.2a5.3 5.3 0 0 1 2.4 10.1V16.2h-4.8v-1.9A5.3 5.3 0 0 1 12 4.2z" stroke="currentColor" strokeWidth="1.7" />
+        <path d="M10 18.2h4M10.8 20.2h2.4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+      </svg>
+    );
+  }
+  if (i === 2) {
+    return (
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" aria-hidden="true">
+        <path d="M3.5 17.5 9 11l3.2 3.4L16.2 9l4.3 8.5z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+        <path d="M14.6 9.4 16.2 6l1.8 2.2" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+  if (i === 3) {
+    return (
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" aria-hidden="true">
+        <path d="M14.4 5.2 18.8 9.6 9 19.4H4.6v-4.4z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+        <path d="M12.8 6.8 17.2 11.2" stroke="currentColor" strokeWidth="1.7" />
+      </svg>
+    );
+  }
+  return (
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" aria-hidden="true">
+      <circle cx="8.2" cy="8" r="2.2" stroke="currentColor" strokeWidth="1.7" />
+      <circle cx="15.8" cy="8" r="2.2" stroke="currentColor" strokeWidth="1.7" />
+      <circle cx="12" cy="9.2" r="2.1" stroke="currentColor" strokeWidth="1.7" />
+      <path d="M4.4 18.2c.3-2.6 2-4 3.8-4s3.4 1.3 3.8 3.6M12.2 14.6c1.5-.4 3.4.5 4.2 3.6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function splitArcTitle(title) {
+  const i = String(title).indexOf(",");
+  if (i === -1) return { a: title, b: "" };
+  return { a: title.slice(0, i + 1), b: title.slice(i + 1).trim() };
 }
 
 export function Arc() {
   const { copy } = usePrefs();
   const a = copy.arc;
+  const title = splitArcTitle(a.title);
   return (
     <section className="sec sec--tint arcsec">
       <div className="wrap arcsec__in">
-        <SectionHead eyebrow={a.eyebrow} title={a.title} lede={a.intro} />
-        <ol className="arcsteps">
-          {a.steps.map((s) => (
-            <li key={s.n}>
-              <span className="arcsteps__n">{String(s.n).padStart(2, "0")}</span>
-              <div className="arcsteps__card">
-                <h3>{s.name}</h3>
-                <p>{s.body}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-        <p className="arcsec__note">{a.footnote}</p>
+        <div className="arcsec__grid">
+          <div className="arcsec__left">
+            <header className="arcsec__copy">
+              <p className="eyebrow">{a.eyebrow}</p>
+              <h2>
+                <span className="arcsec__t1">{title.a}</span>
+                {title.b ? <><br /><span className="arcsec__t2">{title.b}</span></> : null}
+              </h2>
+              <p className="lede">{a.intro}</p>
+            </header>
+            <svg className="arcsec__scribble" viewBox="0 0 160 18" aria-hidden="true">
+              <path d="M4 12C28 4 52 16 86 8C112 2 136 11 156 6" fill="none" stroke="#C89032" strokeWidth="2.2" strokeLinecap="round" />
+            </svg>
+            <figure className="arcsec__hero">
+              <img src="/assets/hero-seoul-student.jpg" alt="" />
+              <svg className="arcsec__trail" viewBox="0 0 320 180" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M48 128C92 96 148 58 214 42C248 34 278 40 302 52" fill="none" stroke="#C89032" strokeWidth="1.8" strokeDasharray="5 6" strokeLinecap="round" />
+                <g transform="translate(292 36) rotate(18)">
+                  <path d="M0 6 18 0l-5.2 10.4-2.6-3.8-4.2 2 0.8-4.2z" fill="none" stroke="#C89032" strokeWidth="1.4" strokeLinejoin="round" />
+                </g>
+              </svg>
+            </figure>
+            <p className="arcsec__note">{a.footnote}</p>
+          </div>
+
+          <ol className="arcsec__rail">
+            {a.steps.map((s, i) => (
+              <li key={s.n}>
+                <span className="arc-row__n">{String(s.n).padStart(2, "0")}</span>
+                <article className="arc-row">
+                  <span className="arc-row__icon" aria-hidden="true"><ArcIcon i={i} /></span>
+                  <div className="arc-row__copy">
+                    <h3>{s.name}</h3>
+                    <p>{s.body}</p>
+                  </div>
+                  <div className="arc-row__media">
+                    <img src={ARC_PHOTOS[i]} alt="" />
+                  </div>
+                </article>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </section>
   );

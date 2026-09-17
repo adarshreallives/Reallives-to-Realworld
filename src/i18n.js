@@ -46,6 +46,7 @@ export const dictionaries = {
       cta: "Explore all destinations",
       more: "Learn more",
       koreaCta: "See the Korea journey",
+      strip: "Real places  /  Real people  /  Real change",
       items: [
         {
           kicker: "Korea 2026",
@@ -77,7 +78,9 @@ export const dictionaries = {
         { not: "Not a tour.", is: "A learning journey.", body: "Nobody follows a guide with a flag. Students are handed a lens: a trained way to walk into any city, read its hidden systems, and stay sharp in a complex world." },
         { not: "Not a cost.", is: "An investment.", body: "The return is not a passport stamp. It is a way of seeing, a set of skills, and a first real glimpse of the kind of person a young person could become." },
         { not: "Not a souvenir.", is: "A measured result.", body: "Every participant finishes with a certificate and a personal ChangeMaker Index report, with a before and after reading of their actual growth across 18 competencies." },
+        { not: "Not a one-time thing.", is: "A lifelong advantage.", body: "It's the beginning of a mindset — one that turns curiosity into confidence, and confidence into choices that matter." },
       ],
+      aside: "Real questions. Real clarity.",
       pledgeLabel: "The one thing every journey is built to do",
       pledgeBody: "Give a young person the entrepreneurial and innovation ability to look at the world, spot what could be built, and gain the insight, and the confidence, to start an idea of their own.",
     },

@@ -117,6 +117,11 @@ export const idea = {
       is: "A measured result.",
       body: "Every participant finishes with a certificate and a personal ChangeMaker Index report, with a before and after reading of their actual growth across 18 competencies.",
     },
+    {
+      not: "Not a one-time thing.",
+      is: "A lifelong advantage.",
+      body: "It's the beginning of a mindset — one that turns curiosity into confidence, and confidence into choices that matter.",
+    },
   ],
   pledge: {
     label: "The one thing every journey is built to do",
