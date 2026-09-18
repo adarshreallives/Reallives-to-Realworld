@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="70" viewBox="0 0 180 70" fill="none">
+  <!-- Vertical divider -->
+  <path d="M18 9V61" stroke="#D9A23A" stroke-width="1.5"/>
+
+  <!-- Decorative flowing line -->
+  <path d="M18 35 C31 35, 38 46, 54 47 C72 48, 82 34, 98 31 C116 27, 132 27, 150 20"
+        stroke="#D9A23A" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+
+  <!-- Globe -->
+  <circle cx="66" cy="27" r="17" fill="#D9A23A"/>
+  <path d="M55 17 C60 21 71 21 78 16
+           M50 27 C56 30 75 30 82 26
+           M54 37 C60 34 73 34 79 38"
+        stroke="#FFF9EC" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+  <path d="M66 10 C61 16 60 22 60 27 C60 33 62 39 66 44
+           M66 10 C71 16 72 22 72 27 C72 33 70 39 66 44"
+        stroke="#FFF9EC" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+  <path d="M66 10V44" stroke="#FFF9EC" stroke-width="1.1" opacity=".9"/>
+
+  <!-- Four-point star -->
+  <path d="M157 10
+           L160.5 17
+           L168 20
+           L160.5 23
+           L157 31
+           L153.5 23
+           L146 20
+           L153.5 17 Z"
+        fill="#D9A23A"/>
+</svg>

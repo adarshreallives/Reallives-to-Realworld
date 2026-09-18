@@ -14,6 +14,7 @@ import BookPage from "./pages/BookPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import Loader from "./components/Loader.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import Motion from "./components/Motion.jsx";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -28,6 +29,7 @@ function Layout() {
     <div className="rl">
       <Loader />
       <Header />
+      <Motion />
       <main id="main">
         <Outlet />
       </main>

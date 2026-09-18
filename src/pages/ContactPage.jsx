@@ -11,8 +11,11 @@ export default function ContactPage() {
   const page = copy.contact;
 
   return (
+
     <>
+      
       <PageHero kicker={page.kicker} title={page.title} lede={page.lede} />
+
       <section className="sec contact-sec">
         <div className="wrap">
           <div className="contact-grid">

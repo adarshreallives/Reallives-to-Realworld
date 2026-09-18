@@ -76,16 +76,20 @@ export default function Header() {
     <header className={"nav" + (scrolled ? " nav--scrolled" : "") + (open ? " nav--open" : "")}>
       <a className="skip" href="#main">{t("skip")}</a>
       <div className="nav__in">
-        <Link className="nav__mark" to="/" onClick={close} aria-label="RealLives to RealWorld">
+        <Link className="nav__mark" to="/" onClick={close} aria-label="RealWorld from RealLives">
           <Mark />
           <span className="nav__lockup">
-            <span className="nav__lockup-row">
-              <span className="nav__lockup-name">RealLives</span>
-              <span className="nav__lockup-to">to</span>
-              <span className="nav__lockup-world">RealWorld</span>
-            </span>
-            <span className="nav__lockup-tag">The ChangeMaker Journey</span>
+            <span className="nav__lockup-world">Real<span>World</span></span>
+            <span className="nav__lockup-from">from RealLives</span>
           </span>
+          <img
+            className="nav__deco"
+            src="/assets/realworld-globe-decoration.svg"
+            alt=""
+            width="140"
+            height="54"
+            aria-hidden="true"
+          />
         </Link>
         <nav className="nav__links" aria-label="Primary">
           {nav.map((n) => (
