@@ -6,6 +6,7 @@
    ============================================================ */
 
 export const brand = {
+
   org: "RealLives Foundation",
   programme: "RealLives to RealWorld",
   tagline: "The ChangeMaker Journey",
@@ -18,9 +19,11 @@ export const brand = {
     phone: "+91 98220 57393",
     linkedin: "linkedin.com/in/reallives",
   },
+
 };
 
 export const nav = [
+
   { path: "/the-idea", label: "The idea" },
   { path: "/method", label: "The method" },
   { path: "/what-it-builds", label: "What it builds" },
@@ -28,13 +31,16 @@ export const nav = [
   { path: "/korea", label: "Korea 2026" },
   { path: "/who-leads", label: "Who leads it" },
   { path: "/schools", label: "For schools" },
+
 ];
 
 export const moreNav = [
+  
   { path: "/contact", label: "Contact" },
 ];
 
 export const hero = {
+
   kicker: "RealLives Foundation",
   /* Swap headline and standfirst for any of the alternates in
      heroAlternates below if you want a different opening note. */
@@ -45,7 +51,7 @@ export const hero = {
   primaryCta: { label: "See the Korea journey", href: "/korea" },
   secondaryCta: { label: "Bring this to your school", href: "/schools" },
   script: ["한국", "변화", "참", "미래"],
-  image: "/assets/hero-seoul-student.jpg",
+  image: "/assets/world-map-background.png",
   badge: { country: "South Korea", line: "Education · Innovation · Opportunity" },
   highlights: [
     { title: "World-class education system" },

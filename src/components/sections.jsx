@@ -532,6 +532,69 @@ export function Method() {
   );
 }
 
+function QualIcon({ i }) {
+  if (i === 0) {
+    // Design mindset — pen / prototype frame
+    return (
+      <svg viewBox="0 0 48 48" width="28" height="28" fill="none" aria-hidden="true">
+        <rect x="10" y="12" width="20" height="24" rx="2.5" stroke="currentColor" strokeWidth="2.1" />
+        <path d="M15 18h10M15 23h8M15 28h6" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" />
+        <path d="M28 30 36.5 14.5l3 1.7L31 31.7l-4.2 1.1Z" stroke="currentColor" strokeWidth="2.1" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+  if (i === 1) {
+    // Genuine curiosity — magnifying glass
+    return (
+      <svg viewBox="0 0 48 48" width="28" height="28" fill="none" aria-hidden="true">
+        <circle cx="21" cy="21" r="10" stroke="currentColor" strokeWidth="2.1" />
+        <path d="M28.5 28.5 37 37" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+        <path d="M17.5 21h7M21 17.5v7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    );
+  }
+  if (i === 2) {
+    // Finding their passion — flame
+    return (
+      <svg viewBox="0 0 48 48" width="28" height="28" fill="none" aria-hidden="true">
+        <path d="M24 10c2 6-6 8-6 16a6 6 0 0 0 12 0c0-5-3-8-1-12 3 3 5 7 5 12a10 10 0 1 1-20 0c0-7 6-11 10-16Z" stroke="currentColor" strokeWidth="2.1" strokeLinejoin="round" />
+        <path d="M24 28a3.5 3.5 0 0 0 0 7" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" />
+      </svg>
+    );
+  }
+  if (i === 3) {
+    // Innovation instinct — lightbulb
+    return (
+      <svg viewBox="0 0 48 48" width="28" height="28" fill="none" aria-hidden="true">
+        <path d="M24 8a10 10 0 0 0-6 18c.8 1.2 1.4 2.4 1.4 3.8v1.4h9.2v-1.4c0-1.4.6-2.6 1.4-3.8A10 10 0 0 0 24 8Z" stroke="currentColor" strokeWidth="2.1" strokeLinejoin="round" />
+        <path d="M19.5 35.5h9M21 39h6" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" />
+        <path d="M24 13v4M17 18l-2.5-2.5M31 18l2.5-2.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    );
+  }
+  if (i === 4) {
+    // Empathy and civic sense — people / community
+    return (
+      <svg viewBox="0 0 48 48" width="28" height="28" fill="none" aria-hidden="true">
+        <circle cx="24" cy="16" r="5" stroke="currentColor" strokeWidth="2.1" />
+        <path d="M14 34c1.2-5.2 4.6-8 10-8s8.8 2.8 10 8" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" />
+        <circle cx="12" cy="18" r="3.5" stroke="currentColor" strokeWidth="2" />
+        <path d="M7 32c.7-3.2 2.4-5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="36" cy="18" r="3.5" stroke="currentColor" strokeWidth="2" />
+        <path d="M41 32c-.7-3.2-2.4-5-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    );
+  }
+  // The courage to begin — flag / start
+  return (
+    <svg viewBox="0 0 48 48" width="28" height="28" fill="none" aria-hidden="true">
+      <path d="M14 38V12" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+      <path d="M14 12h18l-3.5 6.5L32 25H14" stroke="currentColor" strokeWidth="2.1" strokeLinejoin="round" />
+      <path d="M10 38h10" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export function Builds() {
   const { builds } = useContent();
   const { t } = usePrefs();
@@ -541,8 +604,11 @@ export function Builds() {
         <div className="wrap">
           <SectionHead eyebrow={t("pages.builds")} title={builds.title} lede={builds.intro} />
           <div className="quals">
-            {builds.qualities.map((q) => (
+            {builds.qualities.map((q, i) => (
               <div key={q.name}>
+                <span className={"quals__icon quals__icon--" + i} aria-hidden="true">
+                  <QualIcon i={i} />
+                </span>
                 <h4>{q.name}</h4>
                 <p>{q.body}</p>
               </div>

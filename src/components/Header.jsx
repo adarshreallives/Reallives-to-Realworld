@@ -4,40 +4,6 @@ import { nav } from "../content.js";
 import { Arrow, Mark } from "./ui.jsx";
 import { usePrefs } from "../prefs.jsx";
 
-function MoonIcon() {
-  return (
-    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-      <path d="M15.2 3.3A9 9 0 1 0 20.7 14 7.2 7.2 0 0 1 15.2 3.3z" fill="currentColor" />
-    </svg>
-  );
-}
-
-function SunIcon() {
-  return (
-    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-      <circle cx="12" cy="12" r="4" fill="currentColor" />
-      <path d="M12 3v2.2M12 18.8V21M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M3 12h2.2M18.8 12H21M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function HeaderTools() {
-  const { theme, toggleTheme, t } = usePrefs();
-  return (
-    <div className="nav__tools">
-      <button
-        type="button"
-        className="theme-btn"
-        onClick={toggleTheme}
-        aria-label={theme === "dark" ? t("theme.light") : t("theme.dark")}
-        title={theme === "dark" ? t("theme.light") : t("theme.dark")}
-      >
-        {theme === "dark" ? <SunIcon /> : <MoonIcon />}
-      </button>
-    </div>
-  );
-}
-
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -100,7 +66,6 @@ export default function Header() {
         </nav>
         <div className="nav__end">
           <Link className="nav__cta" to="/contact">{t("talk")} <Arrow /></Link>
-          <HeaderTools />
           <button
             className="nav__burger"
             onClick={() => setOpen(!open)}
