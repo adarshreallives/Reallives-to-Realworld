@@ -12,12 +12,14 @@ export const brand = {
   tagline: "The ChangeMaker Journey",
   arc: ["Live", "Understand", "Experience", "Reflect", "Change"],
   sites: ["reallivesworld.com", "changemakerindex.com"],
+
   contact: {
     name: "Dr. Parag Mankeekar",
     role: "Chief Curator, RealLives Foundation",
     email: "parag@reallivesworld.com",
     phone: "+91 98220 57393",
     linkedin: "linkedin.com/in/reallives",
+
   },
 
 };
@@ -42,8 +44,10 @@ export const moreNav = [
 export const hero = {
 
   kicker: "RealLives Foundation",
+
   /* Swap headline and standfirst for any of the alternates in
      heroAlternates below if you want a different opening note. */
+
   headline: ["A country is not a destination.", "It is a case study."],
   standfirst:
     "We take young people to nations that rebuilt themselves, and we train them to read how it was done. They come home with a way of seeing the world that most people acquire, if ever, twenty years later.",
@@ -104,6 +108,7 @@ export const heroAlternates = [
 ];
 
 export const idea = {
+
   title: "Three things this is not",
   intro:
     "Every thoughtful parent and every principal asks the same honest question before they say yes. Here is the answer, in the order the question is usually asked.",
@@ -159,7 +164,12 @@ export const method = {
     title: "A closer look at how it works",
     intro:
       "RealLives is built around a simple idea — give students a safe, guided space to make decisions, face consequences, and learn what it really means to build a life.",
-    aside: "Small steps.\nBig understanding.",
+
+    // aside: "Small steps.\nBig understanding.",
+
+    aside: "Small steps.Big understanding.",
+
+    
     nextPrefix: "Next",
   },
   rhythm: {
@@ -471,13 +481,17 @@ export const korea = {
       body: "Students step inside India's diplomatic home in Korea, interview the Ambassador on diplomacy, trade, culture and what it means to represent a nation, then present their own school and the RealLives concept. Representation practised, not described.",
       builds: "Conviction, cross cultural reading, public poise",
       image: "/assets/embassy-ambassador.jpg",
+  
+
     },
     {
       kicker: "Lab spotlight",
       name: "The Defector Lab",
       body: "Students sit with a woman who escaped North Korea and hear, first hand, what division does to a human life: the everyday reality beyond the headlines, how an escape happens, what it costs, and how a person rebuilds an identity in freedom. Facilitated, age appropriate, and handled with dignity rather than spectacle.",
       builds: "Deep empathy, perspective, gratitude",
-      image: null,
+      // image: null,
+      image: "/assets/the-defector-lab .jpeg",
+
       glyph: "참",
     },
     {

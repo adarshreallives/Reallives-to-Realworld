@@ -359,17 +359,20 @@ export function Method() {
       <section className="journey" aria-labelledby="journey-title">
         <div className="wrap journey__in">
           <header className="journey__head">
+
             <div className="journey__intro">
               <p className="journey__label">{journey.label}</p>
               <h2 id="journey-title" className="journey__title">{journey.title}</h2>
               <p className="journey__lede">{journey.intro}</p>
             </div>
+
             <p className="journey__aside">
               {journey.aside}
               <svg className="journey__aside-mark" viewBox="0 0 90 14" fill="none" aria-hidden="true">
                 <path d="M2 9c18-6 38-8 56-4 10 2 20 5 30 2" stroke="#D69A27" strokeWidth="1.8" strokeLinecap="round" />
               </svg>
             </p>
+
           </header>
 
           <div className="journey__layout">
@@ -704,7 +707,7 @@ export function Korea() {
   const { t } = usePrefs();
   return (
     <>
-      <section className="sec sec--dark korea-intro">
+      <section className="sec korea-intro">
         <div className="wrap">
           <SectionHead eyebrow={t("pages.flagship")} title={korea.title} lede={korea.standfirst} />
           {korea.meta && (
@@ -714,7 +717,7 @@ export function Korea() {
           )}
           <div className="korea-ctas">
             <Link className="btn btn--gold" to="/book">{t("cta.book")} <Arrow /></Link>
-            <Link className="btn btn--ghost" to="/contact">{t("talk")} <Arrow /></Link>
+            <Link className="btn btn--line" to="/contact">{t("talk")} <Arrow /></Link>
           </div>
           <div className="threeup">
             {korea.transformation.map((row) => (
