@@ -14,6 +14,7 @@ export const brand = {
   sites: ["reallivesworld.com", "changemakerindex.com"],
 
   contact: {
+
     name: "Dr. Parag Mankeekar",
     role: "Chief Curator, RealLives Foundation",
     email: "parag@reallivesworld.com",
@@ -37,8 +38,9 @@ export const nav = [
 ];
 
 export const moreNav = [
-  
+
   { path: "/contact", label: "Contact" },
+
 ];
 
 export const hero = {
@@ -57,22 +59,29 @@ export const hero = {
   script: ["한국", "변화", "참", "미래"],
   image: "/assets/world-map-background.png",
   badge: { country: "South Korea", line: "Education · Innovation · Opportunity" },
+
   highlights: [
     { title: "World-class education system" },
     { title: "Young, innovative society" },
     { title: "From resilience to global leadership" },
   ],
+
   flourish: "Real People, Real Countries, Real Change.",
+
 };
 
 export const featured = {
+
   kicker: "Featured destinations",
   title: "Learn from countries that changed themselves",
   intro:
     "Each destination is a living classroom — a place where real challenges, bold ideas and everyday people show how change happens.",
   cta: { label: "Explore all destinations", href: "/destinations" },
+
   items: [
+
     {
+
       kicker: "Korea 2026",
       title: "South Korea",
       tags: "Innovation · Education · Global Mindset",
@@ -80,23 +89,31 @@ export const featured = {
       blurb: "The first ChangeMaker journey — a nation rebuilt in a generation, read as a living case study.",
       href: "/korea",
       image: "/assets/card-korea.jpg",
+
     },
+
     {
+
       kicker: "Universities",
       title: "Global Universities",
       tags: "Research · Diversity · Impact",
       meta: ["Multiple institutions", "Ages 16+"],
       href: "/destinations",
       image: "/assets/card-universities.jpg",
+
     },
+
     {
+
       kicker: "Schools",
       title: "International Schools",
       tags: "Leadership · Collaboration · Future Skills",
       meta: ["Selected schools", "Ages 14+"],
       href: "/schools",
       image: "/assets/card-schools.jpg",
+
     },
+
   ],
 };
 
@@ -133,45 +150,52 @@ export const idea = {
       is: "A lifelong advantage.",
       body: "It's the beginning of a mindset — one that turns curiosity into confidence, and confidence into choices that matter.",
     },
+
   ],
+
   pledge: {
     label: "The one thing every journey is built to do",
     body: "Give a young person the entrepreneurial and innovation ability to look at the world, spot what could be built, and gain the insight, and the confidence, to start an idea of their own.",
   },
+
 };
 
 export const arc = {
   title: "One continuous arc, not ten days",
-  intro:
-    "It begins months before the flight and lands back home as a public contribution. The journey abroad is the spark. The growth is the whole arc.",
+  intro:"It begins months before the flight and lands back home as a public contribution. The journey abroad is the spark. The growth is the whole arc.",
+
   steps: [
+
     { n: 1, name: "Live", body: "Students live other lives inside the RealLives simulation, across 193 countries." },
     { n: 2, name: "Understand", body: "Weekend workshops at home: design thinking, research, problem framing, the SDGs." },
     { n: 3, name: "Experience", body: "The immersion itself, on the ground, run as a sequence of field labs." },
     { n: 4, name: "Reflect", body: "Daily journals, a self video every evening, and a comparison diary against their own country." },
     { n: 5, name: "Change", body: "A public exhibition, a press conference and a community project back home, with a measured RCMI result." },
   ],
-  footnote:
-    "Most of the value is built at home, before and after. That is the part a holiday can never replicate.",
+
+  footnote: "Most of the value is built at home, before and after. That is the part a holiday can never replicate.",
+
 };
 
 export const method = {
+
   title: "A city becomes a classroom",
   intro:
     "The whole model runs on one rigorous idea: a student learns most when a real place becomes a lesson they are trained to read. We call each of these a RealWorld Experiential Lab. The city is observed, questioned and decoded the way an anthropologist reads a culture. This is fieldwork, not sightseeing.",
+
   journey: {
     label: "The journey",
     title: "A closer look at how it works",
-    intro:
-      "RealLives is built around a simple idea — give students a safe, guided space to make decisions, face consequences, and learn what it really means to build a life.",
-
+    intro: "RealLives is built around a simple idea — give students a safe, guided space to make decisions, face consequences, and learn what it really means to build a life.",
+    
     // aside: "Small steps.\nBig understanding.",
 
-    aside: "Small steps.Big understanding.",
+      aside: "Small steps. Big understanding.",
 
-    
-    nextPrefix: "Next",
+      nextPrefix: "Next",
+
   },
+
   rhythm: {
     label: "A daily rhythm that protects depth",
     note: "One demanding block a day, never three. Reflection needs room to breathe.",
@@ -181,6 +205,7 @@ export const method = {
       { when: "Evening", body: "Youth culture and the city at night, observed by wandering." },
     ],
   },
+
   matrix: {
     label: "The Observation Matrix",
     intro:
@@ -292,15 +317,19 @@ export const builds = {
     { name: "Empathy and civic sense", body: "Global problems stop being abstract and start feeling human and close." },
     { name: "The courage to begin", body: "The quiet conviction that they can start contributing now, not someday." },
   ],
+
   transformation: {
+
     before: {
       label: "A student who arrives",
       points: ["Curious but unsure", "Waits to be told", "Sees a country as a place to visit", "Problems feel abstract", "Unsure their ideas matter"],
     },
+
     after: {
       label: "A changemaker who returns",
       points: ["Reads hidden systems", "Takes initiative", "Sees a country as a case study", "Problems feel solvable", "Believes an idea can start with them"],
     },
+
   },
   rcmi: {
     label: "Measured, not asserted",

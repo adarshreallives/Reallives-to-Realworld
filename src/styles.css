@@ -2379,7 +2379,7 @@ body {
 .rl p.journey__aside,
 .journey__aside {
   margin: 8px 0 0;
-  max-width: 12ch;
+  max-width: 13ch;
   font-family: Caveat, "Segoe Script", cursive;
   font-size: clamp(26px, 2.6vw, 32px);
   font-weight: 600;
